@@ -1,0 +1,97 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Healthood: меню
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+
+				<div class="page__container _container" >
+
+                    <aside class="page__side">
+                        <div class="filter">
+                            <div class="content__title">
+                            <span>Выбери своё меню</span>
+                            </div>
+                            <div class="filter__title"></div>
+                            <button type="button" class="icon-filters _icon-arrow-down" type="button">
+                            <span>фильтры:</span>  
+                            </button>
+                            
+                            <div class="filter__body">
+                                <ul class="filter__section-list">
+                                    <il class="section-filter__section">
+                                        <div class="section-filter__body">
+                                            
+                                            <div class="slidecontainer">
+                                                <div class="section-filter__title"></div>
+                                                <p class="section-filter__title">Количество дней: <span id="demo"></span></p>
+                                                <input type="range" min="1" max="14" value="1" class="slider" id="myRange">
+                                                
+                                              </div>
+                                        </div>
+                                    </il>
+                                    <il class="section-filter__section">
+                                        <div class="section-filter__title">Тип:</div>
+                                        <div class="section-filter__body"> 
+                                            <a class = "section-filter__button-t" href="{% url 'standart_menu' %}"><button class = "section-filter__button" >стандартное</button></a>
+                                            <a class = "section-filter__button-t" href="{% url 'vegan_menu' %}"><button class = "section-filter__button" >вегатерианское</button></a>
+                                        </div>
+                                    </il>
+                                    <il class="section-filter__section">
+                                        <div class="section-filter__title">Рацион:</div>
+                                        <div class="section-filter__body"> 
+                                            <button class = "section-filter__button" ><p class = "section-filter__button-t">для похудения (~1400 ккал)</p></button>
+                                            <button class = "section-filter__button" ><p class = "section-filter__button-t">сбалансированный (~1800 ккал)</p></button>
+                                            <button class = "section-filter__button"><p class = "section-filter__button-t">для набора массы (~2100 ккал)</p></button>
+                                        </div>
+                                    </il>
+                                    <il class="section-filter__section">
+                                        <button data-spoller type="button" class = "section-filter__section-with-sublist">
+                                            <div class="section-filter__title">Исключить продукты:</div>
+                                            <div class="section-filter__arrow _icon-arrow-down"></div>
+                                        </button>
+                                        <ul class="section-filter__sublist">
+                                            <li class="section-filter__sub-item">молочные продукты</li>
+                                            <li class="section-filter__sub-item">цитрусовые</li>
+                                            <li class="section-filter__sub-item">орехи</li>
+                                        </ul>
+                                    </il>
+                                </ul>
+   
+                            </div>
+                            <button class="filter__button-order"><a href="/order_step1" class="filter__button-text" >Заказать</a></button>
+
+                        </div>
+                    </aside>
+                    <div class="page__content">
+
+                        <div class="content__title">
+                            <span class = "lol">Вот, что подойдет для вас*</span>
+                        </div>
+
+                        <div class="content__list">
+
+                            {% for el in diets %}
+
+                            <div class="content__item">
+                                <div class="content-item__title">{{el.title}}</div>
+                                <img class = "im-snack" src="{{el.picture.url}}" alt="123">
+                                <div class="content-item__container">
+                                    <div class="content-item__text">{{el.description}}</div>
+                                    <div class="content-item__text">КБЖУ: <span>{{el.ccal}}</span>,<span>{{el.protein}}</span></div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                
+			</main>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Оформление заказа
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+                    <div class= "_container">
+                        <div class="o-title"><div class="o-title__text">Оформление заказа</div></div>
+                        <div class="order">
+                            <div class="order__header">
+                                <div class="order__all-steps">
+                                    <div class="order__step"></div>
+                                    <div class="order__step"></div>
+                                    <div class="order__step"></div>
+                                    <div class="order__step-choosen"></div>
+                                </div>
+                                <div class="order__title">Шаг 4: оплата</div>
+                            </div>
+                           <div class="order__body-delivery order-form">
+
+                                <div class="order-form__comment">Стоимость заказа: 2100 р.</div>
+                                <div class="order-form__comment">Доставка: 200 р.</div>
+                                <div class="order-form__comment">Персональная скидка:  4%</div>
+                                <div class="order-form__comment">Итого: 2208 р.</div>
+
+                                <div class="o-form__button-body">
+                                    <button class="o-button__button" type = "submit"><a href="" class="o-button__text">Оплатить</a></button>
+                                </div>
+
+                            </div>
+                        </div>
+					</div>
+                </main>
+{% endblock%}

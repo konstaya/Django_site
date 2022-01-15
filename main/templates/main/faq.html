@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Healthood: FAQ
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+                    <div class= "_container">
+                        <div class="o-title"><div class="o-title__text">FAQ (часто задаваемые вопросы)</div></div>
+                        <div class="_bcontainer">
+                            <div class="faq__question">Я могу заказать только одно блюдо, например, только обед?</div>
+                            <div class="faq_answer">Наш сервис доставляет только полноценный рацион на день.</div>
+                            <div class="faq__question">Когда мне доставят заказ?</div>
+                            <div class="faq_answer">Дату доставки вы выбираете во время оформление заказа, доставка осуществляется вечером.</div>
+                            <div class="faq__question">Если я заказал/а несколько рационов, как они будут доставлены?</div>
+                            <div class="faq_answer">Дату доставки первого рациона Вы выбираете самостоятельно.
+                                Далее все рационы будут доставляться ежедневно вечером.
+                            </div>
+                        </div>
+                    </div>
+                </main>
+{% endblock%}

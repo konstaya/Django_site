@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Healthood: Регистрация
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+                    <div class= "_container">
+                        <div class="o-title"><div class="o-title__text">Регистрация</div></div>
+                        <div class="_bcontainer lk">
+
+                            <form method="post" class="form">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button class = "button-submit" type="submit">Sign up</button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+{% endblock%}

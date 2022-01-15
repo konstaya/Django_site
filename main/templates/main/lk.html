@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Healthood: личный кабинет
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+                    <div class= "_container">
+                        <div class="o-title"><div class="o-title__text">Личный кабинет</div></div>
+                        <div class="_bcontainer lk">
+                            {% if user.is_authenticated %}
+        		            <p class = "lk_text">Hi {{ user.username }}!</p>
+				            <p><a class = "button-submit" href="{% url 'logout' %}">Log out</a></p>
+      			            {% else %}
+        		            <p class = "lk_text">You are not logged in.</p>
+        	                <a class = "button-submit" href="{% url 'login' %}">Log In</a>
+                            <a class = "button-submit" href="{% url 'signup' %}">Sign Up</a>
+      		                {% endif %}
+                            <!--div class="lk__tel">{{user.username}}</div>
+                            <div class="lk__bonus">Скидка: 3%</div>
+                            <div class="lk__history">Пусто</div-->
+                        </div>
+                    </div>
+                </main>
+{% endblock%}

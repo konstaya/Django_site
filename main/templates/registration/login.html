@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Healthood: Вход в личный кабинет
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+                    <div class= "_container">
+                        <div class="o-title"><div class="o-title__text">Вход</div></div>
+                        <div class="_bcontainer lk">
+
+                            <form class="form" method="post">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                            <button class= "button-submit" type="submit">Log In</button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+{% endblock%}

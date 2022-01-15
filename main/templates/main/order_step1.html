@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Оформление заказа
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+                    <div class= "_container">
+                        <div class="o-title"><div class="o-title__text">Оформление заказа</div></div>
+                        <div class="order">
+                            <div class="order__header">
+                                <div class="order__all-steps">
+                                    <div class="order__step-choosen"></div>
+                                    <div class="order__step"></div>
+                                    <div class="order__step"></div>
+                                    <div class="order__step"></div>
+                                </div>
+                                <div class="order__title">Шаг 1: утвердите меню</div>
+                            </div>
+                            
+                            <div>
+                               <div class="o-item">
+                                    <div class="o-item__header">
+                                        <div class="o-item__text">1 день</div>
+                                        <div class="o-item__button _icon-arrow-down"></div>
+                                    </div>
+                                    <div class="o-item__body"></div>
+                               </div>
+                               <div class="o-item">
+                                    <div class="o-item__header">
+                                        <div class="o-item__text">2 день</div>
+                                        <div class="o-item__button _icon-arrow-down"></div>
+                                    </div>
+                                    <div class="o-item__body"></div>
+                                </div>
+                                <div class="o-item__text" >Итого: 2 400р</div>
+                                <div class="o-button">
+                                    <button class="o-button__button"><a href="/menu" class="o-button__text">Назад</a></button>
+                                    <button class="o-button__button"><a href="/order_step2" class="o-button__text">Далее</a></button>
+                                </div>
+                                
+                           </div>
+                        </div>
+                    </div>
+                        
+                </main>
+{% endblock%}

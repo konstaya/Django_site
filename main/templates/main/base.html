@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+	 <head>
+	<title>{% block title%}{% endblock %}</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="{% static 'main/css/style.min.css'%}">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+	 <body>
+		<div class="wrapper">
+			{% block footer%}{% endblock %}
+
+
+			{% block content%}{% endblock %}
+
+			<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__body">
+			<div class="footer__main">
+				<a href="" class="footer__logo">HEALTHOOD</a>
+				<div class="footer__text">доставка продуктов и рационов здорового питания</div>
+				<div class="footer__contacts contacts-footer">
+					<a href="" class="contacts-footer__item _icon-location">Челябинск</a>
+					<a href="" class="contacts-footer__item _icon-phone">+7(900) 000 00 00</a>
+					<a href="mailto:tasya.kopeysk@gmail.com" target="_blank" class="contacts-footer__item">healthood@gmail.com</a>
+				</div>
+			</div>
+			<div class="footer_menu menu-footer">
+				<div class="menu-footer__column">
+					<ul class="menu-footer__list">
+						<li><a href="" class="menu-footer__link">главная</a></li>
+						<li><a href="" class="menu-footer__link">меню</a></li>
+						<li><a href="" class="menu-footer__link">доставка</a></li>
+						<li><a href="" class="menu-footer__link">о компании</a></li>
+					</ul>
+				</div>
+				<div class="menu-footer__column">
+					<ul class="menu-footer__list">
+						<li><span class="menu-footer">мы в соцсетях:</span></li>
+						<ul class="menu-footer__icons-group">
+							<li><a href="https://www.instagram.com/tasya_kl/"  target = "_blank" class="menu-footer__icons-group__link _icon-instagram"></a></li>
+							<li><a href="https://www.vk.com/konstaya/" target = "_blank" class="menu-footer__icons-group__link _icon-vk"></a></li>
+							<li><a href="https://t.me/konstaya/" target = "_blank" class="menu-footer__icons-group__link _icon-telegram"></a></li>
+						</ul>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+		</div>
+
+<script src="{% static 'main/js/app.min.js'%}"></script>
+	</body>
+
+</html>
+
+{% block index_footer%}
+<header class = "header">
+	<div class="header__wrapper">
+		<div class="header__container _container" >
+			<div class="header__body">
+				<div class="header__main">
+					<a href="{% url 'home' %}" class="header__logo"><H1>HEALTHOOD</H1></a>
+					<div class="header__menu menu">
+
+						<nav class="menu__body">
+							<ul data-spollers="768,max" class="menu__list">
+								<li class="menu__item">
+									<a href="{% url 'home' %}" class="menu__link">главная</a>
+								</li>
+								<li class="menu__item">
+									<a href="{% url 'menu' %}" class="menu__link">меню</a>
+								</li>
+								<li class="menu__item">
+									<a href="{% url 'delivery' %}" class="menu__link">доставка</a>
+								</li>
+								<li class="menu__item">
+									<a href="{% url 'info' %}" class="menu__link">о компании</a>
+									<button data-spoller type="button" class = "menu__arrow _icon-arrow-down"></button>
+									<ul class="menu__sub-list">
+										<li class="menu__sub-item">
+											<a href="{% url 'info' %}" class="menu__sub-link">информация</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="{% url 'faq' %}" class="menu__sub-link">FAQ</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+				</div>
+				<div class="header__actions actions-header">
+					<a href="{% url 'lk' %}" class="actions-header__item actions-header__item_user _icon-profile"></a>
+
+					<a href="" class  = "actions-header__item actions-header__item_phone _icon-phone"></a>
+
+					<span class="actions-header__item actions-header__item_city">Челябинск</span>
+				</div>
+				<button type = "button" class="icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+{% endblock%}
+
+{% block main_footer%}
+<header class = "header">
+	<div class="header__wrapper">
+		<div class="header__container _container" >
+			<div class="header__body">
+				<div class="header__main">
+					<a href="{% url 'home' %}" class="header__logo1"><H1>HEALTHOOD</H1></a>
+					<div class="header__menu menu">
+
+						<nav class="menu__body">
+							<ul data-spollers="768,max" class="menu__list">
+								<li class="menu__item">
+									<a href="{% url 'home' %}" class="menu__link">главная</a>
+								</li>
+								<li class="menu__item">
+									<a href="{% url 'menu' %}"  class="menu__link">меню</a>
+								</li>
+								<li class="menu__item">
+									<a href="{% url 'delivery' %}"  class="menu__link">доставка</a>
+								</li>
+								<li class="menu__item">
+									<a href="{% url 'info' %}"  class="menu__link">о компании</a>
+									<button data-spoller type="button" class = "menu__arrow _icon-arrow-down"></button>
+									<ul class="menu__sub-list">
+										<li class="menu__sub-item">
+											<a href="{% url 'info' %}" class="menu__sub-link">информация</a>
+										</li>
+										<li class="menu__sub-item">
+											<a href="{% url 'faq' %}" class="menu__sub-link">FAQ</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+				</div>
+				<div class="header__actions actions-header">
+					<a href="{% url 'lk' %}" class="actions-header__item actions-header__item_user _icon-profile"></a>
+
+					<a href="" class  = "actions-header__item actions-header__item_phone _icon-phone"></a>
+
+					<span class="actions-header__item actions-header__item_city">Челябинск</span>
+				</div>
+				<button type = "button" class="icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+{% endblock%}

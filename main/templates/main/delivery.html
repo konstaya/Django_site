@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title%}
+Доставка
+{% endblock%}
+
+{% block footer%}
+{% block main_footer%}{% endblock %}
+{% endblock %}
+
+{% block content%}
+<main class="page ">
+                    <div class= "delivery _container">
+                        <div class="delivery__main">
+                            <div class="delivery__body">
+                                <div class="delivery__item">
+                                    <div class="delivery__item-title"><div class="delivery__item-title_text">Доставка</div></div>
+                                    <div class="delivery__item-text">
+                                        Каждый рацион на день доставляется с вечера
+                                        ( с 19.00 до 22.00). Используем качественные продукты
+                                        от проверенных поставщиков.
+                                    </div>
+                                    <div class="delivery__item-text">
+                                        Доставка 1-го рациона от 100р до 300р.
+                                    </div>
+                                    <div class="delivery__item-text">
+                                        При заказе рационов на более чем 5 дней - доставка бесплатна.
+                                    </div>
+                                    <div class="delivery__item-text">
+                                        Мы готовим в центре города, так что цена доставка зависит от удаленности адреса доставки. Подробности можно уточнить на горячей линии.
+                                    </div>
+                                </div>
+                                <div class="delivery__item">
+
+                                    <iframe class="delivery__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1139.895986095653!2d61.37255730824514!3d55.15191897549788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592bcf87d26ff%3A0x1cfe0c636dae14f4!2sUlitsa%20Smirnykh%2C%207%2C%20Chelyabinsk%2C%20Chelyabinskaya%20oblast&#39;%2C%20454080!5e0!3m2!1sen!2sru!4v1638452066447!5m2!1sen!2sru"
+                                    width="500" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    <div class="delivery__item-map-title">Здесь мы готовим!</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </main>
+{% endblock%}
